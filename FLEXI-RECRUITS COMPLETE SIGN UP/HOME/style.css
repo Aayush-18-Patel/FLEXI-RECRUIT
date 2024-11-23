@@ -1,0 +1,145 @@
+/* General styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+header {
+    background: linear-gradient(to right, #2a9df4, #32c9bb);
+    padding: 20px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    color: white;
+    font-weight: bold;
+}
+
+/* Navigation Bar */
+.nav-links {
+    list-style-type: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: white;  /* Default link color */
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 10px;
+    position: relative;
+    transition: transform 0.3s ease, color 0.3s ease;  /* Smooth pop-up and color change */
+}
+
+.nav-links a:hover {
+    color: #006f8f;  /* Darker color on hover */
+    transform: translateY(-5px);  /* Pop up effect */
+}
+
+.nav-links a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: red;  /* Merin aqua underline */
+    transition: width 0.3s;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.nav-links a:hover::after {
+    width: 100%;  /* Expand underline on hover */
+}
+
+/* Hero section */
+.hero-section {
+    background-color: #444;
+    color: white;
+    text-align: center;
+    padding: 150px 20px;
+    min-height: 500px;
+}
+
+.hero-section h1 {
+    font-size: 4rem;
+    margin-bottom: 30px;
+}
+
+.hero-section p {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.cta-button {
+    background-color: #ffc107;
+    color: #333;
+    border: none;
+    padding: 15px 50px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+/* Features section */
+.features-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 100px;
+    background-color: #f4f4f4;
+}
+
+.feature {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 30%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.feature:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.feature .icon {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #32c9bb;
+}
+
+.feature h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.feature p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Add spacing between feature cards */
+.feature + .feature {
+    margin-left: 30px;
+}
